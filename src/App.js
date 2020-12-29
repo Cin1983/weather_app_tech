@@ -1,25 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+ 
+
+class App extends React.Component {
+    state = { temp: [] };
+    
+   
+    onClickSubmit = async term => {
+        const response_weather = await postMessage.get("api.openweathermap.org/data/2.5/weather?id=2172797&appid", {
+            params: { id: term }
+           headers: {
+                Authorization: "Client-ID fbc42b71a1f25bdcec4ba6705cfcb970"
+               
+            }
+        });
+    
+  
+    render() {
+        return (
+            <div>
+
+
+            </div>
+        )
+    }
 }
 
-export default App;
+
+
+    export default App;
